@@ -180,13 +180,7 @@ function startup() {
 const resetBtn = document.getElementById('reset-btn');
 resetBtn.addEventListener('click', resetGame)
 function resetGame() {
-  
-  document.getElementById('print')
-            .innerHTML = `Congratulations! The word was ${state.secret}.`;
   window.location.reload()
-  
-  document.getElementById('print')
-            .innerHTML = `Congratulations! The word was ${state.secret}.`;
 }
 const keys = document.querySelectorAll('.key');
 keys.forEach((key) => {
