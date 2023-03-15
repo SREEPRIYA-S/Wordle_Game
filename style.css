@@ -1,0 +1,195 @@
+html,
+body {
+  
+  text-align: center;
+  
+}
+.sp{
+  color:rgb(232, 184, 62);
+}
+h1 {
+  font-size: 50px;
+  color:  rgb(232, 184, 62);
+  text-shadow: 5px 5px #030303;
+}
+h2{
+  font-size: 20px;
+  color: rgb(199, 196, 196);
+  text-shadow: 2px 2px #030303;
+}
+p,h3{
+  
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  
+}
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: #000000;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+button:hover {
+	background-color: rgb(232, 184, 62);
+  color: #000000;
+}
+
+:root {
+  background-image: url('https://static.wixstatic.com/media/9d04d5_cfe04a45e5624af0814d962564d1ea5b~mv2_d_4200_2800_s_4_2.jpg/v1/fill/w_1920,h_1280,al_c,q_90,usm_0.66_1.00_0.01/9d04d5_cfe04a45e5624af0814d962564d1ea5b~mv2_d_4200_2800_s_4_2.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  --default: #121213;
+  --empty: #3a3a3c;
+  --wrong: #b59f3b;
+  --right: #538d4e;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: rem;
+  width: 100%;
+  height: 92vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
+  
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.box {
+  width: 45px;
+  height: 45px;
+  border: 3px solid var(--empty);
+  margin: 2.5px;
+  border-color:black;
+  background-color: rgb(46, 3, 41);
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+.box.empty {
+  background: var(--empty);
+}
+
+.box.wrong {
+  background: var(--wrong);
+}
+
+.box.right {
+  background: var(--right);
+}
+
+.animated {
+  animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10;
+  position: relative;
+}
+
+.title-word-clone {
+  position: absolute;
+  left: calc(50% + 75px);
+  transform: rotate(25deg);
+  color: yellow;
+  font-size: 1.2rem;
+}
+
+hr {
+  border-style: solid;
+  border-color: var(--empty);
+  border-width: 10px;
+}
+#keyboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #020202;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+  font-weight: bold;
+  color:rgb(232, 184, 62);;
+  background-color: #040404;
+}
+
+.key:hover {
+  background-color: #af43ca;
+}
+
+.key[data-letter="Enter"] {
+  grid-column: 10 / span 2;
+}
+
+.key[data-key="enter"] {
+  grid-column: 4 / span 2;
+  grid-row: 4 / span 2;
+}
+#enter-key {
+  
+  width: 75px;
+  height: 40px;
+}
+#bck-key{
+  width: 125px;
+  height: 40px;
+}
+#print {
+  font-family: Verdana,
+      Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+
+  color: rgb(255, 255, 255);;
+  font-size: 20px;
+}
